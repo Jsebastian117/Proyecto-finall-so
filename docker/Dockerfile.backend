@@ -1,0 +1,9 @@
+FROM debian:13
+
+RUN apt-get update && apt-get install -y python3
+
+COPY server.py /app/server.py
+
+EXPOSE 5000
+
+CMD ["python3", "/app/server.py"]
