@@ -1,1 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyecto final — Grupo 7</title>
+  <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
 
+<!-- ══════════════ NAV ══════════════ -->
+<nav>
+  <span class="nav-brand">grupo_7 / Proyecto final</span>
+  <ul class="nav-links">
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#componentes">Componentes</a></li>
+    <li><a href="#conclusiones">Conclusiones</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="home">
+  <p class="hero-eyebrow">Sistemas Operativos  &nbsp;·&nbsp; Semestre 3 – 2026</p>
+  <h1><span>Proyecto Final</span></h1>
+  <p class="hero-sub">
+    Infraestructura tecnológica integrada con virtualización Linux,
+    contenedores Docker y orquestación Kubernetes.
+  </p>
+  <div class="hero-badges">
+    <span class="badge accent">Grupo 7</span>
+    <span class="badge">Zorin OS 18</span>
+    <span class="badge">Ubuntu 24.04 Server</span>
+    <span class="badge">debian:13</span>
+    <span class="badge">Docker Engine</span>
+    <span class="badge">Kubernetes</span>
+  </div>
+  
+</section>
+
+<hr class="divider"/>
+
+<!-- ══════════════ EQUIPO ══════════════ -->
+<section id="equipo">
+  <div class="container">
+    <p class="section-label">Integrantes</p>
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <p class="section-desc">Universidad del Valle — Tecnologia en Desarrollo de software</p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="avatar">JS</div>
+        <p class="team-name">Johan Stiven<br/>Romero Rodríguez</p>
+       
+      </div>
+      <div class="team-card">
+        <div class="avatar">FS</div>
+        <p class="team-name">Farid Santiago<br/>Velasco Otero</p>
+        
+      </div>
+      <div class="team-card">
+        <div class="avatar">JH</div>
+        <p class="team-name">Jhoban Sebastián<br/>Zapata Baicue</p>
+       
+      </div>
+      <div class="team-card">
+        <div class="avatar">AF</div>
+        <p class="team-name">Andres Felipe<br/>Velasco Portilla</p>
+       
+      </div>
+      <div class="team-card">
+        <div class="avatar">DJ</div>
+        <p class="team-name">Deiby Jhanpier<br/>Hewitt Leiva</p>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ══════════════ COMPONENTES ══════════════ -->
+<section id="componentes">
+  <div class="container">
+    <p class="section-label">Desarrollo</p>
+    <h2 class="section-title">Componentes del Proyecto</h2>
+    <p class="section-desc">
+      Cuatro componentes técnicos construidos de forma secuencial,
+      cada uno dependiente del anterior.
+    </p>
+
+    <!-- ── COMPONENTE 1 ── -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <span class="comp-number">01</span>
+        <div class="comp-info">
+          <h3>Virtualización con Linux</h3>
+          <p>Dos máquinas virtuales Linux configuradas y comunicadas por red</p>
+        </div>
+        
+      </div>
+      <div class="comp-body">
+        <ul class="activity-list">
+          <li>VM Gráfica: Zorin OS 18 con particionamiento manual (/, swap, /home)</li>
+          <li>VM Consola: Ubuntu 24.04 Server sin entorno gráfico</li>
+          <li>Red interna configurada entre ambas VMs</li>
+          <li>Acceso SSH funcional desde Zorin OS hacia Ubuntu Server</li>
+        </ul>
+
+        <div class="cmd-block">
+          <div class="cmd-bar">
+            <span class="cmd-dot r"></span>
+            <span class="cmd-dot y"></span>
+            <span class="cmd-dot g"></span>
+            terminal — verificación
+          </div>
+          <div class="cmd-body">
+            <div class="cmd-line">ip a</div>
+            <div class="cmd-comment"># Ver interfaces de red y direcciones IP</div>
+            <br/>
+            <div class="cmd-line">ping 192.168.101.20</div>
+            <div class="cmd-comment"># Verificar conectividad entre VMs</div>
+            <br/>
+            <div class="cmd-line">ssh stive@192.168.101.20</div>
+            <div class="cmd-comment"># Acceso SSH a VM consola</div>
+            <br/>
+            <div class="cmd-line">lsblk</div>
+            <div class="cmd-comment"># Ver estructura de particiones</div>
+          </div>
+        </div>
+
+        <p class="evidence-label">Evidencias</p>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="..evidencias/componente1/1.png" alt="Instalación Zorin OS"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>1.png</div><p class=\'gallery-caption\'>Instalación Zorin OS</p>'"/>
+            <p class="gallery-caption">Configuracion de la VirtualBox</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente1/2.png" alt="Particionamiento"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>2.png</div><p class=\'gallery-caption\'>Particionamiento manual</p>'"/>
+            <p class="gallery-caption">Instalacion Zorin OS</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente1/3.png" alt="Ubuntu Server"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>3.png</div><p class=\'gallery-caption\'>Ubuntu 24.04 Server</p>'"/>
+            <p class="gallery-caption">Particionamiendo Manual</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente1/4.png" alt="Configuración red"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>4.png</div><p class=\'gallery-caption\'>Configuración de red</p>'"/>
+            <p class="gallery-caption">Zorin OS instalado</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente1/5.png" alt="Ping exitoso"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>5.png</div><p class=\'gallery-caption\'>Ping exitoso entre VMs</p>'"/>
+            <p class="gallery-caption">Verificacion de las particiones</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente1/6.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Verificacion del sistema</p>
+          </div>
+           <div class="gallery-item">
+            <img src="..evidencias/componente1/7.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Configuracion del almacenamiento</p>
+          </div>
+           <div class="gallery-item">
+            <img src="..evidencias/componente1/8.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Inicio de sesion servidor</p>
+          </div>
+           <div class="gallery-item">
+            <img src="..evidencias/componente1/9.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Particiones del Ubuntu Server</p>
+          </div>
+           <div class="gallery-item">
+            <img src="..evidencias/componente1/10.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Sistema operativo servidor</p>
+          </div>
+           <div class="gallery-item">
+            <img src="..evidencias/componente1/11.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Interfaces de red</p>
+          </div>
+           <div class="gallery-item">
+            <img src="..evidencias/componente1/12.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Ping entre VMs</p>
+          </div>
+           <div class="gallery-item">
+            <img src="..evidencias/componente1/13.png" alt="SSH funcional"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🖼️</span>6.png</div><p class=\'gallery-caption\'>SSH funcional</p>'"/>
+            <p class="gallery-caption">Conexion SSH establecida</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COMPONENTE 2 ── -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <span class="comp-number">02</span>
+        <div class="comp-info">
+          <h3>Contenedores Docker</h3>
+          <p>Frontend Nginx + Backend Python orquestados con Docker Compose</p>
+        </div>
+      
+      </div>
+      <div class="comp-body">
+        <ul class="activity-list">
+          <li>Docker Engine instalado en Zorin OS 18 </li>
+          <li>Dockerfile.frontend basado en debian:13 — sirve Nginx en puerto 80</li>
+          <li>Dockerfile.backend basado en debian:13 — servidor Python en puerto 5000</li>
+          <li>docker-compose.yml orquesta ambos servicios con volumen persistente</li>
+          <li>Frontend accesible en localhost y backend en localhost:5000</li>
+        </ul>
+
+        <div class="cmd-block">
+          <div class="cmd-bar">
+            <span class="cmd-dot r"></span>
+            <span class="cmd-dot y"></span>
+            <span class="cmd-dot g"></span>
+            terminal — docker
+          </div>
+          <div class="cmd-body">
+            <div class="cmd-line">docker compose up -d --build</div>
+            <div class="cmd-comment"># Construir imágenes y levantar servicios</div>
+            <br/>
+            <div class="cmd-line">docker ps</div>
+            <div class="cmd-comment"># Ver contenedores en ejecución</div>
+            <br/>
+            <div class="cmd-line">docker images</div>
+            <div class="cmd-comment"># Ver imágenes disponibles</div>
+            <br/>
+            <div class="cmd-line">curl http://localhost</div>
+            <div class="cmd-comment"># Probar frontend</div>
+            <br/>
+            <div class="cmd-line">curl http://localhost:5000</div>
+            <div class="cmd-comment"># Probar backend</div>
+          </div>
+        </div>
+
+        <p class="evidence-label">Evidencias</p>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="..evidencias/componente2/dockerversion.png" alt="Docker version"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🐳</span>dockerversion.png</div><p class=\'gallery-caption\'>docker --version</p>'"/>
+            <p class="gallery-caption">docker --version</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente2/dockerps.png" alt="docker ps"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🐳</span>dockerps.png</div><p class=\'gallery-caption\'>docker ps</p>'"/>
+            <p class="gallery-caption">Contenedores corriendo</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente2/dockerimages.png" alt="docker images"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🐳</span>dockerimages.png</div><p class=\'gallery-caption\'>docker images</p>'"/>
+            <p class="gallery-caption">Imágenes creadas</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente2/curllocalhost_frontfunciona.png" alt="curl localhost"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🐳</span>curllocalhost_frontfunciona.png</div><p class=\'gallery-caption\'>curl localhost</p>'"/>
+            <p class="gallery-caption">curl http://localhost</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente2/curlback_funciona.png" alt="curl backend"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🐳</span>curlback_funciona.png</div><p class=\'gallery-caption\'>curl localhost:5000</p>'"/>
+            <p class="gallery-caption">curl http://localhost:5000</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente2/frontend_navegador.png" alt="Frontend navegador"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🐳</span>frontend_navegador.png</div><p class=\'gallery-caption\'>Frontend en navegador</p>'"/>
+            <p class="gallery-caption">Frontend en navegador</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente2/backend_navegador.png" alt="Backend navegador"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>🐳</span>backend_navegador.png</div><p class=\'gallery-caption\'>Backend en navegador</p>'"/>
+            <p class="gallery-caption">Backend en navegador</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COMPONENTE 3 ── -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <span class="comp-number">03</span>
+        <div class="comp-info">
+          <h3>Orquestación con Kubernetes</h3>
+          <p>Minikube con Nginx desplegado, réplicas y escalado manual</p>
+        </div>
+      </div>
+      <div class="comp-body">
+        <ul class="activity-list">
+          <li>Minikube instalado en Zorin OS 18</li>
+          <li>deployment.yaml con imagen oficial Nginx y 2 réplicas iniciales</li>
+          <li>service.yaml tipo NodePort para acceso externo</li>
+          <li>Escalado manual demostrado de 2 a 3 réplicas</li>
+          <li>Servicio accesible desde navegador vía URL de Minikube</li>
+        </ul>
+
+        <div class="cmd-block">
+          <div class="cmd-bar">
+            <span class="cmd-dot r"></span>
+            <span class="cmd-dot y"></span>
+            <span class="cmd-dot g"></span>
+            terminal — kubernetes
+          </div>
+          <div class="cmd-body">
+            <div class="cmd-line">minikube start --driver=docker</div>
+            <div class="cmd-comment"># Iniciar cluster</div>
+            <br/>
+            <div class="cmd-line">kubectl apply -f deployment.yaml</div>
+            <div class="cmd-comment"># Crear el deployment con 2 réplicas</div>
+            <br/>
+            <div class="cmd-line">kubectl apply -f service.yaml</div>
+            <div class="cmd-comment"># Exponer el servicio NodePort</div>
+            <br/>
+            <div class="cmd-line">kubectl get pods</div>
+            <div class="cmd-comment"># Listar pods</div>
+            <br/>
+            <div class="cmd-line">kubectl scale deployment nginx --replicas=3</div>
+            <div class="cmd-comment"># Escalar a 3 réplicas</div>
+            <br/>
+            <div class="cmd-line">minikube service nginx --url</div>
+            <div class="cmd-comment"># Obtener URL de acceso</div>
+          </div>
+        </div>
+
+        <p class="evidence-label">Evidencias</p>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="..evidencias/componente3/Captura 1.png" alt="minikube start"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>☸️</span>captura 1.png</div><p class=\'gallery-caption\'>minikube start</p>'"/>
+            <p class="gallery-caption">minikube start</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente3/Captura 2.png" alt="kubectl get nodes"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>☸️</span>Captura 2.png</div><p class=\'gallery-caption\'>kubectl get nodes</p>'"/>
+            <p class="gallery-caption">kubectl get nodes</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente3/Captura 3.png" alt="kubectl get pods"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>☸️</span>Captura 3.png</div><p class=\'gallery-caption\'>kubectl get pods</p>'"/>
+            <p class="gallery-caption">Pods corriendo (2 réplicas)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente3/Captura 4.png" alt="Escalado"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>☸️</span>Captura 4.png</div><p class=\'gallery-caption\'>Escalado a 3 réplicas</p>'"/>
+            <p class="gallery-caption">servicios activos NodePort</p>
+          </div>
+          <div class="gallery-item">
+            <img src="..evidencias/componente3/Captura 5.png" alt="Acceso navegador"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>☸️</span>Captura 5.png</div><p class=\'gallery-caption\'>Nginx en navegador</p>'"/>
+            <p class="gallery-caption">Nginx accesible en navegador</p>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="..evidencias/componente3/Captura 6.png" alt="Acceso navegador"
+                 onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'icon\'>☸️</span>Captura 5.png</div><p class=\'gallery-caption\'>Nginx en navegador</p>'"/>
+            <p class="gallery-caption">Escalado a 3 replicas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COMPONENTE 4 ── -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <span class="comp-number">04</span>
+        <div class="comp-info">
+          <h3>Sitio Web de Documentación</h3>
+          <p>Documentación técnica publicada en GitHub Pages</p>
+        </div>
+      
+      </div>
+      <div class="comp-body">
+        <ul class="activity-list">
+          <li>Sitio web publicado con secciones: Home, Equipo, Componentes, Conclusiones</li>
+          <li>Diagramas de arquitectura y capturas de evidencia incluidas</li>
+          <li>Video demostrativo publicado en YouTube</li>
+          <li>Repositorio GitHub con commits de todos los integrantes</li>
+        </ul>
+
+        <div class="comp-links">
+      
+          <a href="https://youtu.be/q6R730D5Hzo?si=ofzxTftuSGZCNXDn">📺 Ver Video en YouTube</a>
+          <a href="https://github.com/Jsebastian117/Proyecto-finall-so">💻 Repositorio GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ══════════════ CONCLUSIONES ══════════════ -->
+<section id="conclusiones">
+  <div class="container">
+    <p class="section-label">Reflexión final</p>
+    <h2 class="section-title">Conclusiones</h2>
+    <p class="section-desc">Aprendizajes y dificultades encontradas durante el desarrollo del proyecto.</p>
+
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <div class="conclusion-icon">🖥️</div>
+        <h4>Virtualización</h4>
+        <p>Aprendimos a instalar y configurar sistemas operativos Linux en entornos virtualizados, incluyendo el particionamiento manual de discos y la configuración de red entre máquinas virtuales.</p>
+      </div>
+      <div class="conclusion-card">
+        <div class="conclusion-icon">🐳</div>
+        <h4>Contenedores Docker</h4>
+        <p>Comprendimos la diferencia entre imágenes y contenedores, cómo escribir Dockerfiles eficientes y cómo orquestar múltiples servicios con Docker Compose para que trabajen juntos.</p>
+      </div>
+      <div class="conclusion-card">
+        <div class="conclusion-icon">☸️</div>
+        <h4>Kubernetes</h4>
+        <p>Logramos desplegar servicios con alta disponibilidad usando réplicas, comprendiendo cómo Kubernetes garantiza que los servicios permanezcan activos ante fallos.</p>
+      </div>
+      <div class="conclusion-card">
+        <div class="conclusion-icon">⚠️</div>
+        <h4>Dificultades</h4>
+        <p>Durante el desarrollo del Componente 3 enfrentamos, problemas de indentación en los archivos YAML y 
+         el cluster de Minikube tardando en iniciar. "Al principio cuando intentamos hacer ping desde Zorin OS hacia Ubuntu Server, no había respuesta. El ping simplemente 
+         se quedaba esperando y no llegaba ningún paquete. Después de revisar, nos dimos cuenta que ambas máquinas estaban configuradas en modo NAT, y el problema con NAT es que cada VM queda en su propia red aislada, entonces no pueden verse entre ellas directamente. La solución fue cambiar el adaptador de red de ambas VMs a Red Interna en VirtualBox, asignándoles la misma red interna para que pudieran comunicarse.
+          Después de ese cambio el ping funcionó perfectamente</p>
+      </div>
+    </div>
+
+    <div class="tech-stack">
+      <div class="tech-pill"><span>🐧</span> Zorin OS 18</div>
+      <div class="tech-pill"><span>🐧</span> Ubuntu 24.04 Server</div>
+      <div class="tech-pill"><span>🐳</span> Docker Engine</div>
+      <div class="tech-pill"><span>📦</span> Docker Compose</div>
+      <div class="tech-pill"><span>☸️</span> Kubernetes</div>
+      <div class="tech-pill"><span>🚀</span> Minikube</div>
+      <div class="tech-pill"><span>🌐</span> Nginx</div>
+      <div class="tech-pill"><span>🐍</span> Python 3</div>
+      <div class="tech-pill"><span>📁</span> GitHub Pages</div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════ LIGHTBOX ══════════════ -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span id="lightbox-close">✕</span>
+  <img id="lightbox-img" src="" alt=""/>
+  <p id="lightbox-caption"></p>
+</div>
+
+<script>
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      const caption = img.nextElementSibling?.textContent || '';
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-caption').textContent = caption;
+      document.getElementById('lightbox').classList.add('active');
+    });
+  });
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
